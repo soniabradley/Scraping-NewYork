@@ -2,19 +2,19 @@
     {{!-- page header --}}
     <div class="row">
         <div class="jumbotron">
-        <h1>Read it on Reddit</h1>
+        <h1 style="color:Tomato;">Read it on Reddit</h1>
         <br>
         <form action="/" method="GET">
-            <div class="col-lg-2"><button class="btn btn-danger">Home</button></div>   
+            <div class="col-lg-2"><button class="btn btn-Link">Home</button></div>   
         </form>
         <div class="col-lg-2">
             <form action="/getNews" method="GET">
-                <button class="btn btn-success" id="getNews"> Lastest News</button>            
+                <button class="btn btn-Link" id="getNews"> Lastest News</button>            
             </form>
         </div>
         <div class="col-lg-2 col-lg-offset-1">
             <form action="/getArticle" method="GET">
-                <button class="btn btn-primary" id="getNews">Your Articles</button>            
+                <button class="btn btn-Link" id="getNews">Your Articles</button>            
             </form>
         </div>
        
@@ -36,8 +36,8 @@
                     </div>
                     <div class="col-lg-3">
                         <form action="/deleteArticle/{{_id}}" method="GET">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#{{id}}">To add notes</button>
-                            <button type="submit" class="btn btn-danger">Delete article</button>  
+                            <button type="button" class="btn btnI-Link" data-toggle="modal" data-target="#{{id}}">Add to Notes</button>
+                            <button type="submit" class="btn btn-Link">Delete article</button>  
                         </form>
                          
                     </div>
@@ -61,16 +61,16 @@
         <h4 class="modal-title">{{title}}</h4>
       </div>
         <div class="modal-body">
-            Your note saved here
+            Save Notes
         </div>
         <hr>
       <form action="/addNote" method="POST">
         <div class="modal-body">
             <div class="form-group">
-                <label for="comment">Your note:</label>
+                <label for="comment">Your Notes:</label>
                 <textarea class="form-control" rows="5" id="comment" style="resize: none" ></textarea>
             </div>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Add Note</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Add Notes</button>
             {{!-- <button type="button" class="btn btn-default" data-dismiss="modal">Delete Note</button> --}}
         </div>
         {{!-- <div class="modal-footer">

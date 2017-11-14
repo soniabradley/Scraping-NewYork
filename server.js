@@ -11,10 +11,11 @@ const app = express();
 
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use("/", routes);
+const routes = require("./controllers/router.js");
+app.use("/", routes);
 // Use express.static to serve the public folder as a static directory
 app.use(express.static(__dirname + "/public"));
-const routes = require("./controllers/router.js");
+
 
 app.use(methodOverride("_method"));
 

@@ -3,7 +3,7 @@
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
-var Content = require("../models/model.js");
+var Content = require("../models/models.js");
 const cheerio = require("cheerio");
 const request = require("request");
 
